@@ -1,0 +1,34 @@
+Detecting compiler hash for triplet x64-windows...
+-- Using %HTTP(S)_PROXY% in environment variables.
+Compiler found: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe
+The following packages are already installed:
+  * cgltf:x64-windows@1.15
+  * dirent:x64-windows@1.26
+  * drlibs:x64-windows@2026-03-03
+  * glfw3:x64-windows@3.5.1
+  * miniaudio:x64-windows@0.11.26
+  * mmx:x64-windows@2025-03-19
+  * nanosvg:x64-windows@2023-12-29
+  * qoi:x64-windows@2026-09-27
+    raygui:x64-windows@4.0
+    raylib[core,audio]:x64-windows@6.2
+  * stb:x64-windows@2026-08-02
+  * vcpkg-cmake:x64-windows@2026-11-09
+  * vcpkg-cmake-config:x64-windows@2026-07-21
+raygui is header-only and can be used from CMake via:
+
+  find_path(RAYGUI_INCLUDE_DIRS "raygui.h")
+  target_include_directories(main PRIVATE ${RAYGUI_INCLUDE_DIRS})
+
+raylib provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(raylib CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE raylib)
+
+raylib provides pkg-config modules:
+
+  # A simple and easy-to-use library to enjoy videogames programming
+  raylib
+
+All requested installations completed successfully in: 371 us

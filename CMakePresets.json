@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "msvc-x64",
+      "displayName": "MSVC x64 (MSBuild + vcpkg)",
+      "binaryDir": "${sourceDir}/build",
+      "architecture": {
+        "value": "x64",
+        "strategy": "set"
+      },
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+      }
+    }
+  ]
+}
